@@ -10,6 +10,7 @@ import javax.ws.rs.core.MediaType;
  */
 
 //http://localhost:8080/messanger/webapi/myresource
+
 @Path("myresource")
 public class MyResource {
 

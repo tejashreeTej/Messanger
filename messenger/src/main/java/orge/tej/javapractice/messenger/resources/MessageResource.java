@@ -1,5 +1,7 @@
 package orge.tej.javapractice.messenger.resources;
 
+import java.util.List;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -14,8 +16,8 @@ public class MessageResource {
 	MessageService messageService = new MessageService();
 
 	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public String getMessages() {
-		return "Hello World Message, from Tejashree!";
+	@Produces(MediaType.APPLICATION_XML)
+	public List<Message> retriveAllMessages() {
+		return messageService.getMessageList();
 	}
 }
